@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Comicss
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.10.
@@ -57,3 +58,6 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+=======
+# AjuasCorp
+>>>>>>> fead1fb704c5f5a0bb4a7ebe6a0f8c0dcc816d29
