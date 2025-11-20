@@ -1,0 +1,543 @@
+
+/* NAVBAR */
+.navbar {
+  background-color: #000;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.logo img {
+  height: 60px;
+  width: auto;
+}
+
+.search-container {
+  flex: 1;
+  max-width: 500px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 20px;
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  font-size: 14px;
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: #fff;
+  text-align: center;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+.nav-menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-menu li a:hover {
+  color: #ff0000;
+}
+
+/* HERO NOSOTROS */
+.nosotros-hero {
+  position: relative;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.nosotros-hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.nosotros-hero-content h1 {
+  font-size: 64px;
+  color: #fff;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-weight: 900;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+  letter-spacing: 2px;
+}
+
+.nosotros-hero-content p {
+  font-size: 24px;
+  color: #ffd700;
+  font-weight: 500;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+/* SECCIÓN HISTORIA */
+.historia-section {
+  padding: 80px 0;
+  background-color: #0d0d0d;
+}
+
+.historia-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.historia-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.historia-text h2 {
+  font-size: 36px;
+  color: #ffd700;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.historia-text p {
+  color: #ccc;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.estadisticas {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.estadistica-item {
+  text-align: center;
+}
+
+.estadistica-item .numero {
+  display: block;
+  font-size: 32px;
+  color: #ffd700;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.estadistica-item .texto {
+  font-size: 14px;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.historia-imagen img {
+  width: 100%;
+  height: 700px;
+  object-fit: cover;
+}
+
+/* SECCIÓN MISIÓN, VISIÓN Y VALORES */
+.mvv-section {
+  padding: 80px 0;
+  background-color: #000;
+}
+
+.mvv-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.mvv-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.mvv-card {
+  background-color: #1a1a1a;
+  padding: 40px 30px;
+  border-radius: 10px;
+  border: 1px solid #2a2a2a;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.mvv-card:hover {
+  transform: translateY(-5px);
+  border-color: #ffd700;
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.1);
+}
+
+.mvv-icon {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.mvv-card h3 {
+  color: #ffd700;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.mvv-card p {
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.mvv-card ul {
+  list-style: none;
+  text-align: left;
+}
+
+.mvv-card ul li {
+  color: #ccc;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.mvv-card ul li::before {
+  content: '✓';
+  color: #ffd700;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/* SECCIÓN EQUIPO */
+.equipo-section {
+  padding: 80px 0;
+  background-color: #0d0d0d;
+}
+
+.equipo-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.seccion-desc {
+  color: #ccc;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.equipo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.miembro-card {
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #2a2a2a;
+  transition: all 0.3s ease;
+}
+
+.miembro-card:hover {
+  transform: translateY(-5px);
+  border-color: #ffd700;
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.1);
+}
+
+.miembro-imagen {
+  height: 250px;
+  overflow: hidden;
+}
+
+.miembro-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.miembro-card:hover .miembro-imagen img {
+  transform: scale(1.1);
+}
+
+.miembro-info {
+  padding: 25px 20px;
+  text-align: center;
+}
+
+.miembro-info h3 {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.miembro-cargo {
+  color: #ffd700;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.miembro-info p {
+  color: #888;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* SECCIÓN BENEFICIOS */
+.beneficios-section {
+  padding: 80px 0;
+  background-color: #000;
+}
+
+.beneficios-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.beneficios-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.beneficio-card {
+  background-color: #1a1a1a;
+  padding: 40px 30px;
+  border-radius: 10px;
+  border: 1px solid #2a2a2a;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.beneficio-card:hover {
+  transform: translateY(-5px);
+  border-color: #ffd700;
+}
+
+.beneficio-icon {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.beneficio-card h3 {
+  color: #ffd700;
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.beneficio-card p {
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* BANNER CONTACTO */
+.contacto-banner {
+  background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+  padding: 70px 50px;
+  margin: 80px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.contacto-content h2 {
+  font-size: 42px;
+  color: #000;
+  margin-bottom: 15px;
+  font-weight: 900;
+}
+
+.contacto-content p {
+  font-size: 20px;
+  color: #000;
+  margin-bottom: 30px;
+  font-weight: 500;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contacto-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-contacto {
+  background-color: #000;
+  color: #ffd700;
+  border: none;
+  padding: 15px 35px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-whatsapp {
+  background-color: #25D366;
+  color: #fff;
+  border: none;
+  padding: 15px 35px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-contacto:hover,
+.btn-whatsapp:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .historia-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .mvv-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .equipo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .beneficios-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .nosotros-hero-content h1 {
+    font-size: 36px;
+  }
+  
+  .estadisticas {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .equipo-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .beneficios-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .contacto-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn-contacto,
+  .btn-whatsapp {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* FOOTER */
+.footer {
+  background-color: #000;
+  padding: 60px 50px 30px;
+  border-top: 2px solid #1a1a1a;
+  margin-top: 70px;
+}
+
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 80px;
+}
+
+.footer-column {
+  flex: 1;
+}
+
+.footer-column h3 {
+  color: #ffd700;
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.footer-column ul {
+  list-style: none;
+}
+
+.footer-column ul li {
+  margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+  color: #888;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #ffd700;
+}
+
+.footer-logo {
+  flex: 0 0 300px;
+  text-align: right;
+}
+
+.footer-logo img {
+  width: 250px;
+  height: auto;
+  filter: brightness(1.1);
+}

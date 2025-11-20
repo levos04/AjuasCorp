@@ -1,0 +1,345 @@
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="navbar-container">
+    <div class="logo">
+      <h2 style="color: #ffd700; margin: 0;">AJUA COMICS</h2>
+    </div>
+    
+    <div class="search-container">
+      <input type="text" class="search-input" placeholder="BUSCADOR">
+    </div>
+    
+    <ul class="nav-menu">
+      <li><a href="/inicio">Inicio</a></li>
+      <li><a href="/catalogo" class="active">Catálogo</a></li>
+      <li><a href="/nosotros">Nosotros</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO CATÁLOGO CON IMAGEN DE FONDO -->
+<section class="catalogo-hero">
+  <div class="hero-banner-image">
+     <img src="img/banner2.webp" alt="Banner Catálogo de Comics">
+    <div class="hero-banner-bg"></div>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="catalogo-hero-content">
+    <h1>Catálogo de Comics</h1>
+    <p>Explora nuestra increíble colección de comics</p>
+  </div>
+</section>
+
+<!-- FILTROS -->
+<section class="filtros-section">
+  <div class="filtros-container">
+    <div class="filtro-item">
+      <label>Categoría</label>
+      <select class="filtro-select">
+        <option>Todas</option>
+        <option>Marvel</option>
+        <option>DC Comics</option>
+        <option>Manga</option>
+        <option>Independientes</option>
+      </select>
+    </div>
+    
+    <div class="filtro-item">
+      <label>Precio</label>
+      <select class="filtro-select">
+        <option>Todos</option>
+        <option>$0 - $200</option>
+        <option>$200 - $500</option>
+        <option>$500+</option>
+      </select>
+    </div>
+    
+    <div class="filtro-item">
+      <label>Ordenar por</label>
+      <select class="filtro-select">
+        <option>Más recientes</option>
+        <option>Precio: Menor a Mayor</option>
+        <option>Precio: Mayor a Menor</option>
+        <option>Nombre A-Z</option>
+      </select>
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÓN: COMICS DESTACADOS -->
+<section class="productos-section">
+  <div class="seccion-header">
+    <h2 class="productos-title">Comics Destacados</h2>
+    <a href="#" class="ver-mas">Ver todos →</a>
+  </div>
+
+  <div class="productos-slider-container">
+    <div class="productos-slider">
+      <div class="producto-card" *ngFor="let comic of comicsDestacados">
+        <div class="comic-badge destacado">Destacado</div>
+        <div class="producto-image">
+          <img [src]="comic.imagen" [alt]="comic.titulo">
+          <div class="producto-overlay">
+            <button class="btn-quick-view">Vista rápida</button>
+          </div>
+        </div>
+        <div class="producto-info">
+          <h3>{{ comic.titulo }}</h3>
+          <p class="producto-autor">{{ comic.autor }}</p>
+          <div class="producto-rating">
+            <span class="stars">★★★★★</span>
+            <span class="rating-number">({{ comic.rating }})</span>
+          </div>
+          <div class="producto-footer">
+            <span class="precio">$ {{ comic.precio }}</span>
+            <button class="btn-agregar">Agregar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÓN: COMICS RECOMENDADOS -->
+<section class="productos-section recomendados-section">
+  <div class="seccion-header">
+    <h2 class="productos-title">Recomendados para ti</h2>
+    <a href="#" class="ver-mas">Ver todos →</a>
+  </div>
+  
+  <div class="productos-slider-container">
+    <div class="productos-slider">
+      <div class="producto-card" *ngFor="let comic of comicsRecomendados">
+        <div class="comic-badge recomendado">Recomendado</div>
+        <div class="producto-image">
+          <img [src]="comic.imagen" [alt]="comic.titulo">
+          <div class="producto-overlay">
+            <button class="btn-quick-view">Vista rápida</button>
+          </div>
+        </div>
+        <div class="producto-info">
+          <h3>{{ comic.titulo }}</h3>
+          <p class="producto-autor">{{ comic.autor }}</p>
+          <div class="producto-rating">
+            <span class="stars">★★★★★</span>
+            <span class="rating-number">({{ comic.rating }})</span>
+          </div>
+          <div class="producto-footer">
+            <span class="precio">$ {{ comic.precio }}</span>
+            <button class="btn-agregar">Agregar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÓN: TUS FAVORITOS -->
+<section class="productos-section favoritos-section">
+  <div class="seccion-header">
+    <h2 class="productos-title">Comics que más te gustan</h2>
+    <a href="#" class="ver-mas">Ver todos →</a>
+  </div>
+  
+  <div class="productos-slider-container">
+    <div class="productos-slider">
+      <div class="producto-card" *ngFor="let comic of comicsFavoritos">
+        <div class="comic-badge favorito">❤️ Favorito</div>
+        <div class="producto-image">
+          <img [src]="comic.imagen" [alt]="comic.titulo">
+          <div class="producto-overlay">
+            <button class="btn-quick-view">Vista rápida</button>
+          </div>
+        </div>
+        <div class="producto-info">
+          <h3>{{ comic.titulo }}</h3>
+          <p class="producto-autor">{{ comic.autor }}</p>
+          <div class="producto-rating">
+            <span class="stars">★★★★★</span>
+            <span class="rating-number">({{ comic.rating }})</span>
+          </div>
+          <div class="producto-footer">
+            <span class="precio">$ {{ comic.precio }}</span>
+            <button class="btn-agregar">Agregar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BANNER PROMOCIONAL -->
+<section class="banner-promocional">
+  <div class="banner-content">
+    <h2>¡Ofertas especiales del mes!</h2>
+    <p>Hasta 50% de descuento en comics seleccionados</p>
+    <button class="btn-banner">Ver ofertas</button>
+  </div>
+</section>
+
+<!-- SECCIÓN: MARVEL COMICS -->
+<section class="productos-section marvel-section">
+  <div class="seccion-header">
+    <h2 class="productos-title">
+      Comics Marvel
+    </h2>
+    <a href="#" class="ver-mas">Ver todos →</a>
+  </div>
+  
+  <div class="productos-slider-container">
+    <div class="productos-slider">
+      <div class="producto-card" *ngFor="let comic of comicsMarvel">
+        <div class="producto-image">
+          <img [src]="comic.imagen" [alt]="comic.titulo">
+          <div class="producto-overlay">
+            <button class="btn-quick-view">Vista rápida</button>
+          </div>
+        </div>
+        <div class="producto-info">
+          <h3>{{ comic.titulo }}</h3>
+          <p class="producto-autor">{{ comic.autor }}</p>
+          <div class="producto-rating">
+            <span class="stars">★★★★★</span>
+            <span class="rating-number">({{ comic.rating }})</span>
+          </div>
+          <div class="producto-footer">
+            <span class="precio">$ {{ comic.precio }}</span>
+            <button class="btn-agregar">Agregar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÓN: DC COMICS -->
+<section class="productos-section dc-section">
+  <div class="seccion-header">
+    <h2 class="productos-title">
+      Comics DC
+    </h2>
+    <a href="#" class="ver-mas">Ver todos →</a>
+  </div>
+  
+  <div class="productos-slider-container">
+    <div class="productos-slider">
+      <div class="producto-card" *ngFor="let comic of comicsDC">
+        <div class="producto-image">
+          <img [src]="comic.imagen" [alt]="comic.titulo">
+          <div class="producto-overlay">
+            <button class="btn-quick-view">Vista rápida</button>
+          </div>
+        </div>
+        <div class="producto-info">
+          <h3>{{ comic.titulo }}</h3>
+          <p class="producto-autor">{{ comic.autor }}</p>
+          <div class="producto-rating">
+            <span class="stars">★★★★★</span>
+            <span class="rating-number">({{ comic.rating }})</span>
+          </div>
+          <div class="producto-footer">
+            <span class="precio">$ {{ comic.precio }}</span>
+            <button class="btn-agregar">Agregar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÓN: MANGA -->
+<section class="productos-section manga-section">
+  <div class="seccion-header">
+    <h2 class="productos-title">Manga</h2>
+    <a href="#" class="ver-mas">Ver todos →</a>
+  </div>
+  
+  <div class="productos-slider-container">
+    <div class="productos-slider">
+      <div class="producto-card" *ngFor="let comic of comicsManga">
+        <div class="comic-badge manga-badge">Manga</div>
+        <div class="producto-image">
+          <img [src]="comic.imagen" [alt]="comic.titulo">
+          <div class="producto-overlay">
+            <button class="btn-quick-view">Vista rápida</button>
+          </div>
+        </div>
+        <div class="producto-info">
+          <h3>{{ comic.titulo }}</h3>
+          <p class="producto-autor">{{ comic.autor }}</p>
+          <div class="producto-rating">
+            <span class="stars">★★★★★</span>
+            <span class="rating-number">({{ comic.rating }})</span>
+          </div>
+          <div class="producto-footer">
+            <span class="precio">$ {{ comic.precio }}</span>
+            <button class="btn-agregar">Agregar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÓN: NOVEDADES -->
+<section class="productos-section novedades-section">
+  <div class="seccion-header">
+    <h2 class="productos-title">Nuevos lanzamientos</h2>
+    <a href="#" class="ver-mas">Ver todos →</a>
+  </div>
+  
+  <div class="productos-slider-container">
+    <div class="productos-slider">
+      <div class="producto-card" *ngFor="let comic of comicsNovedades">
+        <div class="comic-badge nuevo">Nuevo</div>
+        <div class="producto-image">
+          <img [src]="comic.imagen" [alt]="comic.titulo">
+          <div class="producto-overlay">
+            <button class="btn-quick-view">Vista rápida</button>
+          </div>
+        </div>
+        <div class="producto-info">
+          <h3>{{ comic.titulo }}</h3>
+          <p class="producto-autor">{{ comic.autor }}</p>
+          <div class="producto-rating">
+            <span class="stars">★★★★★</span>
+            <span class="rating-number">({{ comic.rating }})</span>
+          </div>
+          <div class="producto-footer">
+            <span class="precio">$ {{ comic.precio }}</span>
+            <button class="btn-agregar">Agregar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>Contenido extra</h3>
+      <ul>
+        <li><a href="#">Sobre nosotros</a></li>
+        <li><a href="#">Contactar</a></li>
+        <li><a href="#">Preguntas frecuentes</a></li>
+        <li><a href="#">Proximamente</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-column">
+      <h3>Para profesionales</h3>
+      <ul>
+        <li><a href="#">Super man</a></li>
+        <li><a href="#">Batman</a></li>
+        <li><a href="#">Super hero</a></li>
+        <li><a href="#">The flash</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-logo">
+      <img src="img/Logo.png" alt="Ajua Comics">
+    </div>
+  </div>
+</footer>

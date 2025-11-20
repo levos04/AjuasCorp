@@ -1,0 +1,121 @@
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="navbar-container">
+    <div class="logo" (click)="volverInicio()">
+      <img src="assets/logo.png" alt="Ajua Comics">
+    </div>
+    
+    <div class="search-container">
+      <input type="text" class="search-input" placeholder="BUSCADOR">
+    </div>
+    
+    <ul class="nav-menu">
+      <li><a href="/inicio">Inicio</a></li>
+      <li><a href="/catalogo">Catálogo</a></li>
+      <li><a href="/nosotros">Nosotros</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="product-container" *ngIf="product">
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <div class="comic-collage" [style.background-image]="'url(' + product.collageImage + ')'"></div>
+    <div class="main-product">
+      <img [src]="product.imageUrl" [alt]="product.name" class="product-image">
+    </div>
+  </div>
+
+  <!-- Price Section -->
+  <div class="price-section">
+    <div class="price-content">
+      <div class="price-main">
+        <span class="price-label">Precio</span>
+        <div class="price">$ {{ product.price }}</div>
+        <div class="installments">{{ product.installments }}</div>
+      </div>
+      <div class="shipping-badge">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+          <circle cx="9" cy="7" r="4"></circle>
+          <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+        </svg>
+        <a href="#" class="free-shipping">Envío gratis a todo el país</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Purchase Info -->
+  <div class="purchase-info">
+    <div class="info-card">
+      <div class="info-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+      </div>
+      <div class="info-text">
+        <p class="delivery-time">Compra ahora y recíbelo en <strong>{{ product.deliveryTime }}</strong></p>
+        <a href="#" class="details-link">Más detalles y formas de entrega</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Description -->
+  <div class="description">
+    <h2 class="description-title">Descripción del producto</h2>
+    <div class="description-content">
+      <p *ngFor="let desc of product.description">
+        {{ desc }}
+      </p>
+    </div>
+  </div>
+
+  <!-- Similar Comics Section -->
+  <div class="similar-section">
+    <h2 class="similar-title">Cómics similares</h2>
+    <div class="similar-grid">
+      <div class="similar-item" *ngFor="let similar of similarProducts" (click)="onSimilarProductClick(similar.id)">
+        <img [src]="similar.imageUrl" [alt]="similar.name" class="similar-image">
+        <h3 class="similar-name">{{ similar.name }}</h3>
+        <div class="similar-price">$ {{ similar.price }}</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Mensaje si no se encuentra el producto -->
+<div class="product-not-found" *ngIf="!product">
+  <h2>Producto no encontrado</h2>
+  <button (click)="volverInicio()" class="btn-volver">Volver al inicio</button>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>Contenido extra</h3>
+      <ul>
+        <li><a href="#">Sobre nosotros</a></li>
+        <li><a href="#">Contactar</a></li>
+        <li><a href="#">Preguntas frecuentes</a></li>
+        <li><a href="#">Proximamente</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-column">
+      <h3>Para profesionales</h3>
+      <ul>
+        <li><a href="#">Super man</a></li>
+        <li><a href="#">Batman</a></li>
+        <li><a href="#">Super hero</a></li>
+        <li><a href="#">The flash</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-logo">
+      <img src="assets/logo-footer.png" alt="Ajua Comics">
+    </div>
+  </div>
+</footer>
